@@ -1,0 +1,22 @@
+@use '../variables.scss';
+
+.header-area {
+    .icon-cart {
+        svg, i {
+            font-size: variables.$font-size-icon-cart;
+        }
+    }
+
+    .box-menu-links {
+        li {
+            margin-right: 45px;
+            a {
+                font-weight: 400;
+            }
+            a.active {
+                // color: variables.$hover-active;
+                font-weight: bold;
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@use '../variables.scss';
+
+.footer-area {
+    padding: 60px 0;
+
+    .box-important-links, .box-normal-links {
+        a.active {
+            color: variables.$hover-active;
+        }
+    }
+
+    .box-socials {
+        .icons {
+            &:hover {
+                i, svg {
+                    color: variables.$hover-active;
+                    transition-timing-function: var(--ease-in-out);
+                }
+            }
+            svg, i {
+                font-size: variables.$footer-social-icons;
+                color: variables.$white; 
+                transition-timing-function: var(--ease-in-out);
+            } 
+        }
+    }
+
+    .box-contact {
+        .box-icon {
+            margin-bottom: 15px;
+            i, svg {
+                margin-right: 7px;
+            }
+        }
+    }
+}
