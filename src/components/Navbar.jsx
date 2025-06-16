@@ -2,6 +2,8 @@ import { FaCartShopping  } from "react-icons/fa6";
 import "../assets/styles/components/navbar.scss"
 import { NavLink, Link } from "react-router-dom";
 
+import logo from "../assets/img/logo-ilustrativa.png";
+
 const Navbar = () => {
   return (
     <header className="header-area">
@@ -10,7 +12,7 @@ const Navbar = () => {
           <div className="flex justify-between sm:grid sm:grid-flow-col gap-2">
             <div className="box-logo w-28 sm:w-40">
               <Link to={`/`}>
-                <img className='' src="./src/assets/img/logo-ilustrativa.png" alt="Logo" title="Logo" />
+                <img className='' src={logo} alt="Logo" title="Logo" />
               </Link>
             </div>
 

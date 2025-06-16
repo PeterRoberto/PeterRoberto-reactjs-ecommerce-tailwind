@@ -2,6 +2,8 @@ import { FaInstagram, FaLinkedinIn, FaYoutube, FaEnvelope, FaTiktok, FaPhone } f
 import "../assets/styles/components/footer.scss"
 import { NavLink, Link } from "react-router-dom";
 
+import logoFooter from "../assets/img/logo-branca-ilustrativa.png";
+
 const Footer = () => {
   return (
     <footer className='footer-area bg-black mt-20'>
@@ -10,9 +12,9 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
             
             <div className="box-logo-bio md:pr-20">
-                <a href="#" target='blank'>
-                    <img className='' src="./src/assets/img/logo-branca-ilustrativa.png" alt="Logo" title="Logo" />
-                </a>
+                <Link to={`/`}>
+                    <img className='' src={logoFooter} alt="Logo" title="Logo" />
+                </Link>
                 <p className="text-white block mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec enim velit, fringilla at massa non, sagittis dignissim ipsum. Vestibulum quam nunc, hendrerit sit amet ultricies at, eleifend quis enim.</p>
                 <div className="box-socials flex gap-4 mt-4">
                     <a href="#" className="icons">
