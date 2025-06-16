@@ -20,6 +20,7 @@ const Product = () => {
     const [cepInputValue, setCepInputValue] = useState('');
     const [buildUrlCep, setBuildUrlCep] = useState('');
     const [dataState, setDataState] = useState();
+    const [getTotalCart, setGetTotalCart] = useState(null);
     const storageKey = 'cart';
     const minutesToRemoveStorage = 15;
     const { data } = useFetch(buildUrlCep);
@@ -33,11 +34,22 @@ const Product = () => {
         cep: cepInputValue
     }
 
+    const getTotalCartProdcut = (storageKey) => {
+        let strCartItem = JSON.parse(localStorage.getItem(storageKey));
+        
+        if(strCartItem) {
+            let qtdStrItems = strCartItem.data.length;
+            return qtdStrItems;
+        }
+        
+    }
+
     const addToBag = () => {
         addProductCart(storageKey, productStorage, minutesToRemoveStorage);       
         setDataState(null);
         setBuildUrlCep(null);
         setCepInputValue('');
+        setGetTotalCart(getTotalCartProdcut(storageKey));
     }
 
     const addProductCart = (key, newProduct, minutes) => {
@@ -94,6 +106,10 @@ const Product = () => {
 
 
     useEffect(() => {
+        if(storageKey) {
+            setGetTotalCart(getTotalCartProdcut(storageKey));
+        }
+        
         if(!buildUrlCep) return;
         if (data) {
             setDataState(data);
@@ -137,7 +153,12 @@ const Product = () => {
 
 
   return (
+    
     <section className="product-area">
+        {getTotalCart && (
+            <h2>{getTotalCart}</h2>
+        )}
+        
         <div className='container mx-auto px-5 xl:px-30'>
             <div className="grid md:grid-cols-2 gap-7">
                 <div className="box-content">

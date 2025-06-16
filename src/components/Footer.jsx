@@ -10,8 +10,8 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
             
             <div className="box-logo-bio md:pr-20">
-                <a href="https://montink.com/" target='blank'>
-                    <img className='' src="https://sou.montink.com/wp-content/uploads/2024/04/logo-white.png" alt="MontInk" />
+                <a href="#" target='blank'>
+                    <img className='' src="./src/assets/img/logo-branca-ilustrativa.png" alt="Logo" title="Logo" />
                 </a>
                 <p className="text-white block mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec enim velit, fringilla at massa non, sagittis dignissim ipsum. Vestibulum quam nunc, hendrerit sit amet ultricies at, eleifend quis enim.</p>
                 <div className="box-socials flex gap-4 mt-4">

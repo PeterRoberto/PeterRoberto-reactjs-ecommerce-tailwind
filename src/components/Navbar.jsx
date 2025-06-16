@@ -10,7 +10,7 @@ const Navbar = () => {
           <div className="flex justify-between sm:grid sm:grid-flow-col gap-2">
             <div className="box-logo w-28 sm:w-40">
               <Link to={`/`}>
-                <img className='' src="https://sou.montink.com/wp-content/uploads/2024/04/logo.png" alt="Montink" title="Montink" />
+                <img className='' src="./src/assets/img/logo-ilustrativa.png" alt="Logo" title="Logo" />
               </Link>
             </div>
 
